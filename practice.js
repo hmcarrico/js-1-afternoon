@@ -1,154 +1,140 @@
-//////////////////PROBLEM 1////////////////////
 
-//Create a function declaration called greeting that
-//accepts name as its only parameter.
-//greeting should return the string "Hello, "
-//plus the value of the name parameter.
+// #1 Create a variable called hello and assign it the string 'goodbye'
+var hello = 'goodbye';
 
-//Code here
 
-//////////////////PROBLEM 2////////////////////
+// #2 Use the variable iLove to create a new variable called iLoveCode that is assigned the string "I love code"
+var iLove = 'I love';
+var iLoveCode = iLove + ' code';
+// #3  Make an object called bob and give it the following properties
+// bob has a height of 6ft (string)
+// bob has an age of 24 (Number)
+// bob has hair, that has style spikey, and color brown (object)
+// bob is not presidentOfTheUnitedStates (boolean)
+// bob likes apples, bananas, and cherries (array of strings)
+var bob = {
+	height: "6ft",
+	age: 24,
+	hair: {
+		style: 'spikey',
+		color: 'brown'
+		},
+	presidentOfTheUnitedStates: false,
+	likes: ['apples', 'bananas', 'cherries']
 
-//Rewrite the function greeting as a function expression.
-//Name it newGreeting.
+};
 
-//Code Here
-
-//////////////////PROBLEM 3////////////////////
-
-//Rewrite the function greeting as an arrow function.
-//Name it finalGreeting.
-
-//Code Here
-
-//////////////////PROBLEM 4////////////////////
-
-//Create an array called groceries with the values
-//"apples", "milk", "eggs", "bread"
-
-//Code Here
-
-//Write a function called doubleCheck that takes in an array
-//as a parameter.
-
-//If the array does not contain "chocolate", add "chocolate".
-//doubleCheck should return the array.
-
-//Code Here
-
-//////////////////PROBLEM 5////////////////////
-
-//Create an object saved to the variable dog.
-//The dog object should have the following properties:
-//name (a string), color: (a string), age (a number),
-//and goodBoy (a boolean).
-
-//Code Here
-
-//...access the dog's name from the object and assign it to a
-//variable called devMountainClassPet.
-
-//Code Here
-
-//Add a method to dog called bark.
-//The value of bark should be a function that returns the string "Woof woof".
-
-//Code Here
-
-//Store the result of invoking the bark method in a variable called ruff.
-
-//Code Here
-
-//////////////////PROBLEM 6////////////////////
-
-//Write a function called looper that takes in an array. looper should declare
-//a variable called mySum and set it equal to 0. looper should then loop through
-//the array and check each element.
-
-//If the element is odd, or if the element is greater than or equal to 100, add the element
-//to the mySum variable total.
-
-//Return mySum.
-
-//Code Here
-
-//////////////////PROBLEM 7////////////////////
-
-//Given the following function called math
-
-function math(num1, num2, callback) {
-  return callback(num1, num2);
+// #4 Change my shirt color to pink using dot notation
+var myShirt = {
+	type: 'polo',
+	color: 'red'
+};
+myShirt.color = 'pink';
+// Change my shirt type to spandex using square bracket notation
+var myOtherShirt = {
+	type: 'polo',
+	color: 'red'
+};
+myOtherShirt['type'] = 'Spandex';
+// #5 Create an object that tracks a count of animals in a zoo.  Call it 'zoo'
+// The key should be the animal name(string) and the value should be how many there are.
+// Our zoo has 8 monkeys, 4 giraffes and 2 elephants
+var zoo = {
+	monkeys: 8,
+	giraffes: 4,
+	elephants: 2
 }
 
-//Write a function called add that takes in two parameters and
-//returns the result of adding them together.
+// #6 Loop through this object and change all keys that start with the letter s to have a value of 's'
 
-//Code Here
+var snake = {
+	sliters: 'sideways',
+	eats: 'rodents',
+	says: 'ssss',
+	smells: 'heat',
+	runs: 'legless'
+};
 
-//Now invoke math, passing in the numbers 3 and 4, and your add function,
-//storing the result in the variable mathSum.
 
-//Code Here
-
-//////////////////PROBLEM 8////////////////////
-
-//Write a function called invoker that takes in one paramter, a callback function.
-//invoker should return the result of invoking the callback.
-
-function sampleCallbackOne() {
-  return "I am a callback function";
+for (var key in snake ) {
+	if(key[0] ==="s") {  
+		snake[key] = "s";
+	}
 }
 
-function sampleCallbackTwo() {
-  return "I am also a callback function";
+//#7 Create an array of strings that are the 7 primary colors in the rainbow - red, orange, yellow, green, blue, indigo, violet (lower-case). Call your array rainbowColors
+var rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet',];
+// #8 Using this array do the following
+var heroes = ['superman', 'batman', 'flash'];
+// add 'wonderwoman' to the end
+heroes.push('wonderwoman');
+// remove 'superman' and store him in a variable called firstHero
+var firstHero = heroes.shift();
+// add 'spongebob' to the start of the array
+heroes.unshift('spongebob');
+// remove 'flash' from the array and store him in a variable called secondHero
+var secondHero = heroes.splice(2, 1);
+// leave batman in the array but put a copy of him on a variable called thirdHero
+var thirdHero = heroes[1];
+
+
+
+// #9 Write a function called addItem that takes in an array and an item, adds the item to
+// the array, and returns the array with the added item.
+var addItem = (arr, item) => {
+	arr.push(item);
+	return arr;
 }
 
-//Code Here
+// #10 Write a function called removeItem that takes in an array of strings, and a string.
+// Removes all instances of that string from the array. And return the modified array.
+// The order of the array should not be changed
+var removeItem = (arr, str) => {
+	arr.filter(function(item){
+		return item !== str;
+	})
+	
+}
+// #11 Write a function  called doubleTheFun that takes 1 parameter. It should double numbers, and
+// repeats strings. example 4->8, 2.5->5, 'Awesome'->'AwesomeAwesome'
+var doubleTheFun = (item) => {
 
-//////////////////PROBLEM 9////////////////////
-
-let duck = "cute";
-
-function bathroom() {
-  let rubberDuck = "squeaky";
-  function bathtub() {
-    let sailorDuck = "nautical";
-  }
 }
 
-function pond() {
-  let realDuck = "fluffy";
+
+// #12 Write function getValueOfProperty that takes in an object, and the name of a property on the object
+// return the value from the object that corresponds to the property
+var getValueOfProperty = () => {
+	
 }
 
-//There are 4 variables above: duck, rubberDuck, sailorDuck and realDuck
-//all within different scopes.
-//Given the functions and variables above, edit the arrays
-//below to contain only the appropriate variable names
-//as strings.
+// #13 Write a function called makeChatMessage that takes in a message and author as parameters
+// and returns an object with a message, author, and timestamp, that is
+// the current time as a Date object
+var makeChatMessage = (message, author) => {
 
-//This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+}
+// #14 Create a function called coderTest that takes in an object that is a person. It looks to see if the person’s name is Jeremy and then changes the person object to have a property called lovesCode with a value of 10.  If their name is Brack set lovesCode to 0.  otherwise set lovesCode to 5.
+var coderTest = (personname) => {
+	if(name === 'Jeremy'){
 
-//This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+	}
+}
 
-//This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+// #15 Create a function called outside that takes in a temperature (number), a humidity(number), and a cloudiness(number), in that order. Using the following to return the correct values
+/*
+    temperature over 80 and humidity over 40 - return "I'm all sweat"
+    temperature under 40 and cloudiness over 60 - return "I have icecicles"
+    temperature over 80 and humidity under 40 and cloudiness under 20 - return "I'm literally in the desert"
+    temperature over 80 or humidity over 50 or cloudiness over 50 - return "Hmm, probably not"
+    Otherwise - return "I love outside"
+*/
+var outside = (temperature, humidity, cloudiness) =>{
 
-//This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
 
-//////////////////PROBLEM 10////////////////////
+}
+// #16 Create a function called callerBack that takes in a function (holla) and a string parameter(back) and invokes it(holla) with the argument string(back) + ' back'."
+// example - If I call you with 'Give it' you should invoke holla with 'Give it back'
+var callerBack = () => {
 
-//Create a function called outerFn which returns an anonymous
-//function which returns your name.
-
-//Code Here
-
-//Now save the result of invoking outerFn into a variable called innerFn.
-
-//Code Here
-
-//Now invoke innerFn and save the result to a variable called finalResult.
-
-//Code Here
+}
